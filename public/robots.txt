@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /service
+Disallow: /career
+Disallow: /faq
+Disallow: /terms-and-condition
+Disallow: /privacy-policy
+
+Sitemap: https://www.marketinsights.report/sitemap.xml

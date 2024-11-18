@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #090ea5;
+  --color-secondary: #fa9511;
+  --color-accent: #222222;
+  --color-neutral: #f1fcfa;
+  --color-info: #0a54ff;
+  --color-success: #f1fcfa;
+  --color-tertiary: #ffede8;
+}
+
+@layer components {
+  .mrf-heading {
+    @apply text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+
+  .mrf-sub-heading {
+    @apply text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+  }
+
+  .mrf-secondary-heading {
+    @apply text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+  }
+
+  .mrf-h4 {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl;
+  }
+
+  .mrf-h5 {
+    @apply text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl;
+  }
+
+  .mrf-h6 {
+    @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl;
+  }
+
+  .mrf-small {
+    @apply text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl;
+  }
+}
+
+.remove_arrow .swiper-button-next,
+.remove_arrow .swiper-button-prev {
+  visibility: hidden;
+}
+
+.north_america {
+  top: 10%;
+  left: 12%;
+}
+
+.south_africa {
+  left: 22%;
+  bottom: 20%;
+}
+
+.europe {
+  right: 35%;
+  top: 8%;
+}
+
+.asia_pacific {
+  top: 20%;
+  right: 20%;
+}
+
+.middle_east {
+  bottom: 32%;
+  right: 39%;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}

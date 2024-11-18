@@ -1,0 +1,30 @@
+.rd img {
+  width: 80%;
+  margin: auto;
+}
+
+.rd h2 {
+  font-size: 1.25rem;
+  /* Equivalent to Tailwind's text-xl class */
+  font-weight: 700;
+  /* Equivalent to Tailwind's font-bold class */
+  text-transform: uppercase;
+  /* Equivalent to Tailwind's uppercase class */
+  border-bottom-width: 4px;
+  /* Equivalent to Tailwind's border-b-4 class */
+  color: var(--color-secondary);
+  /* Replace 'yourPrimaryColor' with your primary color hex value */
+  border-color: var(--color-primary);
+  /* Replace 'yourSecondaryColor' with your secondary color hex value */
+  width: fit-content;
+  /* Equivalent to Tailwind's w-fit class */
+  text-align: left;
+  /* Equivalent to Tailwind's text-left class */
+}
+
+@media (max-width: 600px) {
+  .rd img {
+    width: 95%;
+    margin: auto;
+  }
+}
