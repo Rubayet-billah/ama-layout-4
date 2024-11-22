@@ -7,7 +7,7 @@ const Header = async () => {
   const parentCategories = await fetchParentCategories();
   return (
     <div>
-      <TopNavbar />
+      {/* <TopNavbar /> */}
       <MainNavbar parentCategories={parentCategories} />
     </div>
   );

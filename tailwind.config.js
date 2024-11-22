@@ -9,8 +9,8 @@ module.exports = {
     themes: [
       {
         customTheme: {
-          primary: "#090ea5",
-          secondary: "#fa9511",
+          primary: "#0E0F3B",
+          secondary: "#F7931E",
           accent: "#222222",
           neutral: "#F1FCFA",
           info: "#0A54FF",
@@ -36,8 +36,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#090ea5",
-        secondary: "#fa9511",
+        primary: "#0E0F3B",
+        secondary: "#F7931E",
         accent: "#222222",
         neutral: "#F1FCFA",
         info: "#0A54FF",

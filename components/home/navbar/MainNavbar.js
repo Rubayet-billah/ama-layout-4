@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { Mail, Menu, X } from "react-feather";
+import { Mail, Menu, Phone, Search, X } from "react-feather";
 import LinkTags from "./LinkTags";
 import Link from "next/link";
 import { salesEmail } from "@/constants/constants";
@@ -11,11 +11,13 @@ import SearchBar from "@/components/common/search/SearchBar";
 import MRFImage from "@/components/ui/Image";
 import logo from "@/assets/logo.gif";
 import logo2 from "@/assets/logo.jpg";
+import NavbarSearch from "./NavbarSearch";
 
 const MainNavbar = ({ parentCategories = [] }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [logoType, setLogoType] = useState(logo);
+  const [showNavSearch, setShowNavSearch] = useState(false);
   const menuRef = useRef(null);
   const pathname = usePathname();
 
@@ -65,14 +67,15 @@ const MainNavbar = ({ parentCategories = [] }) => {
 
   return (
     <div
-      className={`${
-        pathname === "/" &&
-        (scrolled
-          ? "absolute lg:bg-white text-black lg:fixed shadow-md"
-          : "absolute lg:top-14 bg-transparent text-white")
-      } ${
-        pathname !== "/" ? "bg-white shadow-md text-black relative" : ""
-      } top-0 z-30 w-full transition-all duration-300`}
+      className="relative top-0 z-30 w-full text-white bg-primary"
+      // className={`${
+      //   pathname === "/" &&
+      //   (scrolled
+      //     ? "absolute lg:bg-white text-black lg:fixed shadow-md"
+      //     : "absolute lg:top-14 bg-transparent text-white")
+      // } ${
+      //   pathname !== "/" ? "bg-white shadow-md text-black relative" : ""
+      // } top-0 z-30 w-full transition-all duration-300`}
     >
       <CustomContainer>
         <div className="p-0 navbar lg:py-2 lg:gap-5">
@@ -103,8 +106,16 @@ const MainNavbar = ({ parentCategories = [] }) => {
               />
             </Link>
           </div>
-          <div className="hidden navbar-end lg:flex lg:flex-grow">
+          <div className="hidden navbar-center lg:flex lg:flex-grow lg:ml-12">
             <LinkTagsDesktop parentCategories={parentCategories} />
+          </div>
+          <div className="gap-4 lg:gap-10 navbar-end w-fit">
+            <Search
+              onClick={() => setShowNavSearch((prev) => !prev)}
+              size={18}
+            />
+            <Phone className="text-secondary" size={18} />
+            <Mail className="text-secondary" size={18} />
           </div>
           <div className="lg:hidden navbar-end">
             <div className="flex items-center gap-1 text-xs lg:hidden">
@@ -122,6 +133,7 @@ const MainNavbar = ({ parentCategories = [] }) => {
           <SearchBar />
         </section>
       </CustomContainer>
+      <NavbarSearch showNavSearch={showNavSearch} />
     </div>
   );
 };

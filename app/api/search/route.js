@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   const body = await request.json();
-  console.log("body", body);
   try {
     const req = axios.post(`${process.env.API_URL}/api/search`, body);
     const data = (await req).data;

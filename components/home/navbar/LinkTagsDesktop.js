@@ -16,10 +16,10 @@ const LinkTagsDesktop = ({ parentCategories }) => {
           key={index}
           className={`px-4 cursor-pointer ${
             link.submenus ? "group relative dropdown" : ""
-          } ${pathname == link.url ? "text-primary" : ""}`}
+          } ${pathname == link.url ? "text-secondary" : ""}`}
         >
           <Link
-            className={`p-0 hover:text-primary`}
+            className={`p-0 hover:text-secondary`}
             href={link.url}
             style={{
               backgroundColor: "transparent",
@@ -36,12 +36,12 @@ const LinkTagsDesktop = ({ parentCategories }) => {
                 backgroundColor: "transparent",
               }}
             >
-              <ul className="top-0 right-48 z-10 grid grid-cols-2 gap-2 p-4 bg-white rounded shadow w-[576px]">
+              <ul className="top-0 z-10 grid grid-cols-2 gap-2 p-4 bg-[#172153] rounded shadow w-[576px]">
                 {parentCategories?.map((submenu) => (
                   <li key={submenu.id} className="py-1">
                     <Link
                       href={`/industries/${submenu.link}`}
-                      className="inline-flex items-center p-0 cursor-pointer text-accent hover:text-primary"
+                      className="inline-flex items-center p-0 text-white cursor-pointer hover:text-secondary"
                       style={{
                         backgroundColor: "transparent",
                       }}
