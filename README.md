@@ -31,7 +31,7 @@ root
 
 - **Primary:** #0E0F3B
 - **Secondary:** #F7931E
-- **Accent:** #222222
+- **Accent:** #837575
 - **Neutral:** #6b6b6b
 - **Info:** #0693E3
 

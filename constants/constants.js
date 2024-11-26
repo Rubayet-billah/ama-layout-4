@@ -13,7 +13,7 @@ export const salesEmail = "sales@marketinsights.report";
 export const themeColors = {
   primary: "#0E0F3B",
   secondary: "#F7931E",
-  accent: "#222222",
+  accent: "#837575",
   neutral: "#6b6b6b",
   info: "#0693E3",
 };

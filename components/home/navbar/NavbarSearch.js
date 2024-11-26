@@ -70,7 +70,7 @@ const NavbarSearch = ({ showNavSearch }) => {
       <CustomContainer>
         <form onSubmit={handleSubmit} className="relative">
           <input
-            className="w-full px-4 pr-12 text-sm border border-none lg:text-base lg:py-2 text-neutral placeholder-neutral bg-inherit focus:outline-none focus:ring-2 focus:ring-primary"
+            className="w-full px-4 pr-12 text-sm border border-none lg:text-base lg:py-2 text-neutral placeholder-accent placeholder:text-lg bg-inherit focus:outline-none focus:ring-2 focus:ring-primary"
             type="search"
             placeholder="Search Reports here..."
             value={searchValue}
@@ -84,7 +84,7 @@ const NavbarSearch = ({ showNavSearch }) => {
             <Search />
           </button> */}
         </form>
-        {isTyping && (
+        {isTyping ? (
           <div className="w-full max-w-2xl mt-2 text-sm text-black bg-white rounded shadow-md">
             {suggestions?.map((sg, index) => (
               <Link
@@ -107,27 +107,28 @@ const NavbarSearch = ({ showNavSearch }) => {
               </div>
             )}
           </div>
+        ) : (
+          <div className="mt-3 text-sm">
+            <p className="text-base font-semibold text-accent">Quick links</p>
+            <ul className="capitalize">
+              <li className="flex items-center gap-2">
+                <ArrowRight size={14} /> Most popular reports
+              </li>
+              <li className="flex items-center gap-2">
+                <ArrowRight size={14} /> Limited offers
+              </li>
+              <li className="flex items-center gap-2">
+                <ArrowRight size={14} /> Most popular reports
+              </li>
+              <li className="flex items-center gap-2">
+                <ArrowRight size={14} /> Limited offers
+              </li>
+              <li className="flex items-center gap-2">
+                <ArrowRight size={14} /> Most popular reports
+              </li>
+            </ul>
+          </div>
         )}
-        <div className="mt-3 text-sm">
-          <p className="text-base font-semibold">Quick links</p>
-          <ul className="capitalize">
-            <li className="flex items-center gap-2">
-              <ArrowRight size={14} /> Most popular reports
-            </li>
-            <li className="flex items-center gap-2">
-              <ArrowRight size={14} /> Limited offers
-            </li>
-            <li className="flex items-center gap-2">
-              <ArrowRight size={14} /> Most popular reports
-            </li>
-            <li className="flex items-center gap-2">
-              <ArrowRight size={14} /> Limited offers
-            </li>
-            <li className="flex items-center gap-2">
-              <ArrowRight size={14} /> Most popular reports
-            </li>
-          </ul>
-        </div>
       </CustomContainer>
     </div>
   );

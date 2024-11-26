@@ -11,7 +11,7 @@ module.exports = {
         customTheme: {
           primary: "#0E0F3B",
           secondary: "#F7931E",
-          accent: "#222222",
+          accent: "#837575",
           neutral: "#F1FCFA",
           info: "#0A54FF",
         },
@@ -38,10 +38,10 @@ module.exports = {
       colors: {
         primary: "#0E0F3B",
         secondary: "#F7931E",
-        accent: "#222222",
+        accent: "#837575",
         neutral: "#F1FCFA",
         info: "#0A54FF",
-        tertiary: "#FFEDE8",
+        tertiary: "#7FCDEE",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
