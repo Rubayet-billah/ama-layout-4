@@ -1,34 +1,36 @@
+"use client";
 import LucidIcon from "@/components/ui/icons/LucidIcons";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { ArrowRight, Minus, Plus } from "react-feather";
 
 const IndustryCard = ({ industry }) => {
   const { label, summary, icon, link } = industry;
+  const [isOpen, setIsOpen] = useState(false);
 
   const truncateText = (text, maxLength) => {
     return text?.length > maxLength ? text.slice(0, maxLength) + "..." : text;
   };
 
   return (
-    <Link
-      href={`/industries/${link}`}
-      className="p-6 transition-transform duration-300 bg-white rounded shadow hover:scale-105 min-h-60 group"
-    >
-      {/* Icon */}
-      {icon && (
-        <div className="w-20">
-          <LucidIcon name={icon} classNames="text-primary" size={48} />
+    <div className="p-0 mb-2 text-white border rounded bg-neutral collapse">
+      <input
+        className="p-0"
+        onClick={() => setIsOpen(!isOpen)}
+        type="checkbox"
+      />
+      <div className="flex items-center justify-between px-4 py-1 font-medium collapse-title ">
+        <div className="flex items-center gap-2">
+          {icon && (
+            <div className="">
+              <LucidIcon name={icon} classNames="text-secondary" size={30} />
+            </div>
+          )}
+          <h3 className="text-xl font-bold">{label}</h3>
         </div>
-      )}
-
-      {/* Reports Info */}
-      <div className="mt-2">
-        <p className="text-sm">200+ reports</p>
+        <span>{isOpen ? <Minus /> : <Plus />}</span>
       </div>
-
-      {/* Industry Info */}
-      <div className="flex flex-col gap-2">
-        <h3 className="text-xl font-bold">{label}</h3>
+      <div className="collapse-content">
         <p className="text-sm">
           {truncateText(
             summary ||
@@ -36,8 +38,14 @@ const IndustryCard = ({ industry }) => {
             130
           )}
         </p>
+        <Link
+          href={`/industries/${link}`}
+          className="flex items-center gap-2 mt-3 text-secondary"
+        >
+          Explore reports <ArrowRight size={18} />
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 };
 

@@ -4,29 +4,33 @@ import SectionTitle from "../ui/SectionTitle";
 import CustomContainer from "../ui/CustomContainer";
 import Link from "next/link";
 import { ArrowRight } from "react-feather";
+import MRFImage from "../ui/Image";
+import artWorkUnderline from "@/assets/artWorks/artWorkUnderline.png";
+import industryCircle from "@/assets/artWorks/industryCircle.gif";
 
 const Industries = ({ industries }) => {
   return (
-    <div className="pb-5 lg:pb-10 bg-neutral">
-      <SectionTitle subtitle="Upto 5000+ categorized reports">
-        Browse reports by categories
-      </SectionTitle>
-
+    <div className="relative py-5 overflow-hidden lg:py-16">
       <CustomContainer>
-        <div className="flex justify-end mb-5 lg:mb-10">
-          <Link
-            href="/industries"
-            className="flex items-center gap-1 text-sm font-semibold duration-100 hover:text-primary"
-          >
-            All categories <ArrowRight size={16} />
-          </Link>
-        </div>
-        <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <header className="mb-10 lg:mb-16">
+          <div className="relative w-fit">
+            <span className="font-bold mrf-secondary-heading">
+              Market Research By Category
+            </span>
+            <div className="absolute w-56 -bottom-4 lg:w-80 -right-16 ">
+              <MRFImage src={artWorkUnderline} alt="artwork underline" />
+            </div>
+          </div>
+        </header>
+        <section className="grid max-w-lg grid-cols-1 gap-6">
           {industries?.map((industry) => {
             return <IndustryCard key={industry.id} industry={industry} />;
           })}
         </section>
       </CustomContainer>
+      <section className="absolute hidden w-full max-w-3xl top-10 -right-80 2xl:-right-24 lg:block">
+        <MRFImage src={industryCircle} alt="industry circle" />
+      </section>
     </div>
   );
 };
