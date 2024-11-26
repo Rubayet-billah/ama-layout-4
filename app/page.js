@@ -53,8 +53,8 @@ export default async function Home() {
     <div>
       <Header />
       <Banner />
-      {/* <Service /> */}
       <Industries industries={industryCardDataHome} />
+      <Service />
       <StatsSection />
       <RecentReports recentReports={recentReports} />
       <Testimonials testimonials={testimonialsHome} />

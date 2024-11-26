@@ -4,9 +4,11 @@ import CustomContainer from "../ui/CustomContainer";
 import icon1 from "@/assets/serviceCard/servicesIcon/Picture1.png";
 import icon2 from "@/assets/serviceCard/servicesIcon/Picture2.png";
 import icon3 from "@/assets/serviceCard/servicesIcon/Picture3.png";
+import artWorkUnderline from "@/assets/artWorks/artWorkUnderline.png";
 import image1 from "@/assets/serviceCard/image-1.jpg";
 import image2 from "@/assets/serviceCard/image-2.jpeg";
 import image3 from "@/assets/serviceCard/image-3.jpeg";
+import MRFImage from "../ui/Image";
 
 const Service = () => {
   const services = [
@@ -38,6 +40,16 @@ const Service = () => {
 
   return (
     <CustomContainer classNames="py-10">
+      <header className="mb-10 lg:mb-16">
+        <div className="relative w-fit">
+          <span className="font-bold mrf-secondary-heading">
+            Market Research By Category
+          </span>
+          <div className="absolute w-56 -bottom-4 lg:w-80 -right-16 ">
+            <MRFImage src={artWorkUnderline} alt="artwork underline" />
+          </div>
+        </div>
+      </header>
       <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-12">
         {services.map((service) => (
           <ServiceCard key={service.id} service={service} />
