@@ -4,6 +4,7 @@ import CustomContainer from "../ui/CustomContainer";
 import artWork1 from "@/assets/bannerSlider/artwork1.png";
 import MRFImage from "../ui/Image";
 import BannerFooter from "./banner/BannerFooter";
+import barGraph from "@/assets/banner/barGraph.gif";
 
 const Banner = () => {
   return (
@@ -14,7 +15,7 @@ const Banner = () => {
             "flex items-center justify-center lg:justify-start min-h-[550px] xl:min-h-[650px]"
           }
         >
-          <section className="grid gap-10 lg:grid-cols-2">
+          <section className="grid gap-10 lg:grid-cols-2 place-items-center">
             <div className="max-w-4xl text-center xl:ml-12 md:text-left">
               <div>
                 <h2 className="mb-3 mrf-heading lg:mb-7 min-h">
@@ -32,7 +33,9 @@ const Banner = () => {
                 </Button>
               </div>
             </div>
-            <div className="w-full h-20 lg:w-1/2"></div>
+            <div className="grid w-full place-items-center">
+              <MRFImage src={barGraph} alt="Bar Graph" classNames="max-w-lg" />
+            </div>
           </section>
         </CustomContainer>
       </div>

@@ -28,7 +28,7 @@ const Industries = ({ industries }) => {
           })}
         </section>
       </CustomContainer>
-      <section className="absolute hidden w-full max-w-3xl top-10 -right-80 2xl:-right-24 lg:block">
+      <section className="absolute hidden w-full max-w-2xl top-10 lg:-right-24 2xl:-right-0 lg:block">
         <MRFImage src={industryCircle} alt="industry circle" />
       </section>
     </div>

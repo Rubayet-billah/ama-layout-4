@@ -55,7 +55,7 @@ export default async function Home() {
       <Banner />
       <Industries industries={industryCardDataHome} />
       <Service />
-      <StatsSection />
+      {/* <StatsSection /> */}
       <RecentReports recentReports={recentReports} />
       <Testimonials testimonials={testimonialsHome} />
       <Sponsors sponsors={sponsorsHome} />
