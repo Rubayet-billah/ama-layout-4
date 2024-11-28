@@ -22,14 +22,18 @@ const Industries = ({ industries }) => {
             </div>
           </div>
         </header>
-        <section className="grid max-w-lg grid-cols-1 gap-6">
+        <section className="grid grid-cols-1 gap-6 lg:pr-96">
           {industries?.map((industry) => {
             return <IndustryCard key={industry.id} industry={industry} />;
           })}
         </section>
       </CustomContainer>
-      <section className="absolute hidden w-full max-w-2xl top-10 lg:-right-24 2xl:-right-0 lg:block">
-        <MRFImage src={industryCircle} alt="industry circle" />
+      <section className="absolute hidden w-full max-w-2xl top-10 -right-0 lg:block">
+        <MRFImage
+          src={industryCircle}
+          alt="industry circle"
+          classNames="translate-x-1/2"
+        />
       </section>
     </div>
   );
