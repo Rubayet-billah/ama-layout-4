@@ -9,7 +9,7 @@ import artWorkUnderline from "@/assets/artWorks/artWorkUnderline.png";
 import artWork4 from "@/assets/artWorks/artWork4.png";
 import MRFImage from "../ui/Image";
 import Button from "../ui/Button";
-import { ArrowRight } from "react-feather";
+import { ArrowRight, ChevronDown } from "react-feather";
 
 const RecentReports = ({ recentReports }) => {
   const renderReport = (report) => (
@@ -42,6 +42,11 @@ const RecentReports = ({ recentReports }) => {
         showAdjacent
       /> */}
       <CustomContainer>
+        <div className="flex justify-end my-10 lg:my-16">
+          <Button variant="secondary" classNames="rounded-full">
+            Filter by category <ChevronDown size={18} />
+          </Button>
+        </div>
         <section className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           {recentReports?.map((report) => (
             <RecentReportCard key={report.id} report={report} />
