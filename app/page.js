@@ -44,7 +44,7 @@ export default async function Home() {
       fetchIndustriesHome(),
       fetchTestimonials(),
       fetchSponsorLogos(),
-      fetchRecentReports(),
+      fetchRecentReports(6),
     ]);
 
   const { data: testimonialsHome } = testimonialsData;

@@ -53,7 +53,7 @@ const Service = () => {
             <span className="absolute w-20 -left-5 -top-10 lg:w-28">
               <MRFImage src={artWorkSpiral} alt="artwork spiral" />
             </span>
-            <span className="font-bold mrf-secondary-heading">
+            <span className="font-bold mrf-secondary-heading relative z-[1]">
               Core Services
             </span>
             <div className="absolute w-32 -bottom-2 lg:w-56 -right-16 ">
@@ -61,7 +61,7 @@ const Service = () => {
             </div>
           </div>
         </header>
-        <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-12">
+        <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-12 lg:pt-12 lg:pb-16">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
