@@ -15,11 +15,31 @@ import CustomContainer from "@/components/ui/CustomContainer";
 import SubscribeForm from "./SubscribeForm";
 import { salesEmail } from "@/constants/constants";
 import { fetchParentCategories } from "@/utils/fetchFunctions";
+import paymentImg from "@/assets/footer/payment.png";
+import MRFImage from "@/components/ui/Image";
 
 const MainFooter = async () => {
   const parentCategories = await fetchParentCategories();
   const currentYear = new Date().getFullYear();
   const copyrightMsg = "AMA Research. All rights reserved";
+
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com/advancemarketanalytics",
+      label: "Facebook link",
+      icon: Facebook,
+    },
+    {
+      href: "https://twitter.com/amareport",
+      label: "Twitter link",
+      icon: Twitter,
+    },
+    {
+      href: "https://www.linkedin.com/company/advance-market-analytics",
+      label: "LinkedIn link",
+      icon: Linkedin,
+    },
+  ];
 
   return (
     <footer className="bg-primary">
@@ -51,7 +71,7 @@ const MainFooter = async () => {
               <span className="">{salesEmail}</span>
             </p>
           </div>
-          <nav className="w-full py-4 space-y-3">
+          {/* <nav className="w-full py-4 space-y-3">
             <h3 className="pb-2 text-2xl font-bold border-b">Extra Links</h3>
             <div className="grid grid-cols-2">
               <div className="flex flex-col gap-2">
@@ -72,7 +92,6 @@ const MainFooter = async () => {
                 <Link className="hover:text-secondary" href="/career">
                   Career
                 </Link>
-                {/* <Link href="/about">Our approach</Link> */}
               </div>
             </div>
           </nav>
@@ -82,7 +101,30 @@ const MainFooter = async () => {
               <SubscribeForm />
             </div>
             <p className="pt-8 text-sm">Get the latest updates and offers.</p>
-          </div>
+          </div> */}
+          <nav className="w-full py-4 space-y-3">
+            <h3 className="pb-2 text-2xl font-bold">Connect With Us</h3>
+            <div className="flex gap-2 mt-3 lg:gap-4 md:mt-0">
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  aria-label={label}
+                  className="p-2 duration-100 bg-white rounded-full hover:text-white text-secondary hover:bg-secondary"
+                >
+                  <Icon size={18} />
+                </Link>
+              ))}
+            </div>
+          </nav>
+
+          <section className="w-full py-4 space-y-3">
+            <h3 className="pb-2 text-2xl font-bold">Secure Payment Partners</h3>
+            <div className="max-w-56">
+              <MRFImage src={paymentImg} alt="payment image" />
+            </div>
+          </section>
         </div>
         <nav className="mb-5 text-xs text-white lg:text-sm">
           <div className="grid grid-cols-3 gap-2 lg:grid-cols-6 lg:gap-x-4">
