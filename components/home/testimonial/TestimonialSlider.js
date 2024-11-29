@@ -47,6 +47,16 @@ const TestimonialSlider = ({ testimonials }) => {
         pagination={{
           clickable: true,
         }}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        }}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
