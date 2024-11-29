@@ -11,14 +11,14 @@ const SubscribeForm = () => {
       </label>
       <InputText
         classNames={
-          "w-full h-full text-black border-2 border-primary focus:outline-none"
+          "w-full h-full text-black border-2 border-secondary focus:outline-none bg-white"
         }
         name="subscriptionEmail"
         type="email"
         label="Your Email Address:"
         placeholder="you@example.com"
       />
-      <button className="block h-full px-2 bg-primary" aria-label="Subscribe">
+      <button className="block h-full px-2 bg-secondary" aria-label="Subscribe">
         <Mail size={22} color="black" />
       </button>
     </form>

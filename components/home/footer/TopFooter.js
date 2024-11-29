@@ -6,9 +6,9 @@ import { Mail, MapPin, PhoneCall } from "react-feather";
 
 const TopFooter = () => {
   return (
-    <div className="py-10 text-white bg-accent">
+    <div className="py-10 text-white bg-primary">
       <CustomContainer>
-        <h2 className="mb-4 text-lg lg:text-xl text-primary">
+        <h2 className="mb-4 text-lg text-white lg:text-xl">
           About {websiteTitle}
         </h2>
         <p className="text-sm text-justify">

@@ -17,6 +17,7 @@ import {
 import { metadata } from "./layout";
 import BusinessInsightsBanner from "@/components/home/BusinessInsightsBanner";
 import RecentReports from "@/components/home/RecentReports";
+import CreditSection from "@/components/home/CreditSection";
 
 export const generateMetadata = async () => {
   const res = await fetch(`${process.env.API_URL}/api/publishers`, {
@@ -58,11 +59,11 @@ export default async function Home() {
       {/* <StatsSection /> */}
       <RecentReports recentReports={recentReports} />
       <Testimonials testimonials={testimonialsHome} />
-      <Sponsors sponsors={sponsorsHome} />
+      {/* <Sponsors sponsors={sponsorsHome} />
       <EntrepreneurBanner />
-      {/* <Newses /> */}
-      <section className="hidden h-48 lg:block bg-neutral"></section>
-      <BusinessInsightsBanner />
+      <Newses />
+      <BusinessInsightsBanner /> */}
+      <CreditSection />
       <Footer />
     </div>
   );

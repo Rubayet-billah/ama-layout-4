@@ -22,14 +22,14 @@ const MainFooter = async () => {
   const copyrightMsg = "AMA Research. All rights reserved";
 
   return (
-    <footer className="bg-accent">
+    <footer className="bg-primary">
       <CustomContainer>
         <div className="grid grid-cols-1 gap-8 py-8 text-white md:grid-cols-2 lg:grid-cols-4 lg:py-12">
           <address className="w-full py-4 space-y-3 not-italic">
             <h3 className="text-2xl font-bold">Business Address</h3>
             <h3 className="text-2xl font-bold">Head Office</h3>
             <p className="flex gap-2">
-              <MapPin className="w-[46px] text-primary mt-1" size={18} />
+              <MapPin className="w-[46px] text-secondary mt-1" size={18} />
               <span>
                 Office no. A 5010, fifth floor, Solitaire Business Hub, Near
                 Phoenix mall, Pune, Maharashtra 411014
@@ -43,11 +43,11 @@ const MainFooter = async () => {
               <p className="text-sm text-accent">Business Development Head</p>
             </div>
             <p className="flex items-center gap-2">
-              <PhoneCall className="text-primary" size={18} />{" "}
+              <PhoneCall className="text-secondary" size={18} />{" "}
               <span>+1 940 441 3937</span>
             </p>
             <p className="flex items-center gap-2">
-              <Mail className="text-primary" size={18} />
+              <Mail className="text-secondary" size={18} />
               <span className="">{salesEmail}</span>
             </p>
           </div>
@@ -55,21 +55,21 @@ const MainFooter = async () => {
             <h3 className="pb-2 text-2xl font-bold border-b">Extra Links</h3>
             <div className="grid grid-cols-2">
               <div className="flex flex-col gap-2">
-                <Link className="hover:text-primary" href="/about">
+                <Link className="hover:text-secondary" href="/about">
                   About
                 </Link>
-                <Link className="hover:text-primary" href="/contact">
+                <Link className="hover:text-secondary" href="/contact">
                   Contacts
                 </Link>
-                <Link className="hover:text-primary" href="/#testimonial">
+                <Link className="hover:text-secondary" href="/#testimonial">
                   Testimonials
                 </Link>
               </div>
               <div className="flex flex-col gap-2">
-                <Link className="hover:text-primary" href="/service">
+                <Link className="hover:text-secondary" href="/service">
                   Services
                 </Link>
-                <Link className="hover:text-primary" href="/career">
+                <Link className="hover:text-secondary" href="/career">
                   Career
                 </Link>
                 {/* <Link href="/about">Our approach</Link> */}
@@ -95,7 +95,7 @@ const MainFooter = async () => {
                 <Link
                   key={idx}
                   href={`/industries/${ct.link}`}
-                  className="hover:text-primary"
+                  className="hover:text-secondary"
                 >
                   {ct?.label}
                 </Link>
@@ -107,19 +107,22 @@ const MainFooter = async () => {
           <p>© {`${currentYear} ${copyrightMsg}`}</p>
           <nav className="items-center gap-2 md:flex lg:gap-4">
             <div className="flex gap-2 md:mr-10">
-              <Link className="hover:text-primary" href="/testimonials">
+              <Link className="hover:text-secondary" href="/testimonials">
                 Testimonials
               </Link>
               <hr className="w-0 h-auto border" />
-              <Link className="hover:text-primary" href="/privacy-policy">
+              <Link className="hover:text-secondary" href="/privacy-policy">
                 Privacy Policy
               </Link>
               <hr className="w-0 h-auto border" />
-              <Link className="hover:text-primary" href="/terms-and-condition">
+              <Link
+                className="hover:text-secondary"
+                href="/terms-and-condition"
+              >
                 Terms and Conditions
               </Link>
               <hr className="w-0 h-auto border" />
-              <Link className="hover:text-primary" href="/faq">
+              <Link className="hover:text-secondary" href="/faq">
                 FAQ
               </Link>
             </div>
@@ -128,7 +131,7 @@ const MainFooter = async () => {
                 href="https://www.facebook.com/advancemarketanalytics"
                 target="_blank"
                 aria-label="Facebook link"
-                className="hover:text-primary"
+                className="hover:text-secondary"
               >
                 <Facebook size={18} />
               </Link>
@@ -136,7 +139,7 @@ const MainFooter = async () => {
                 href="https://twitter.com/amareport"
                 target="_blank"
                 aria-label="Twitter link"
-                className="hover:text-primary"
+                className="hover:text-secondary"
               >
                 <Twitter size={18} />
               </Link>
@@ -144,7 +147,7 @@ const MainFooter = async () => {
                 href="https://www.linkedin.com/company/advance-market-analytics"
                 target="_blank"
                 aria-label="LinkedIn link"
-                className="hover:text-primary"
+                className="hover:text-secondary"
               >
                 <Linkedin size={18} />
               </Link>
