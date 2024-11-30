@@ -11,8 +11,8 @@ const Button = ({
   htmlType = "button",
 }) => {
   const buttonStyles = {
-    primary: "bg-primary text-white hover:bg-neutral hover:text-black",
-    secondary: "bg-secondary text-white hover:bg-neutral hover:text-black",
+    primary: "bg-primary text-white hover:bg-neutral hover:text-white",
+    secondary: "bg-secondary text-white hover:bg-neutral hover:text-white",
     tertiary: "bg-tertiary text-white hover:bg-accent hover:text-neutral",
     neutral: "bg-neutral text-white hover:bg-accent hover:text-neutral",
     light: "bg-white text-primary hover:bg-tertiary hover:text-white",

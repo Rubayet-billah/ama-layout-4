@@ -61,11 +61,11 @@ export default async function Home() {
       <RecentReports recentReports={recentReports} />
       <FlowChartSection />
       <Testimonials testimonials={testimonialsHome} />
-      {/* <Sponsors sponsors={sponsorsHome} />
-      <EntrepreneurBanner />
+      <Sponsors sponsors={sponsorsHome} />
+      {/* <EntrepreneurBanner />
       <Newses />
       <BusinessInsightsBanner /> */}
-      <CreditSection />
+      {/* <CreditSection /> */}
       <Footer />
     </div>
   );
